@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("https://s-ec.bstatic.com/images/hotel/max1024x768/122/122282378.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    font-size:20px;
+    font-family: verdana;
+    background-color:#c4e4ed;
+}
+
+h1 {
+    color: #c4e4ed;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+form{
+	margin-left: 20%;
+    margin-right: 20%;
+	opacity: 0.9;
+	text-align:center;
+    background-color: #d8ecf3;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #307f9c;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-family:verdana;
+    font-size: 15px;
+}
+
+li a:hover {
+    background-color: green;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#signin">Sign-in</a></li>
+  <li><a href="#signup">Sign-up</a></li>
+</ul>
+
+<h1>Post a Profile or Listing!</h1>
+
+<form action="/action_page.php" id="userform">
+	First name:<br>
+	<input type="text" name="firstname" value="First">
+	<br>
+	Last name:<br>
+	<input type="text" name="lastname" value="Last">
+	<br>
+    City:<br>
+    <input list="cities" name="city">
+    <datalist id="cities">
+    	<option value="Los Angeles">
+        <option value="San Diego">
+        <option value="San Francisco">
+        <option value="Santa Barbara">
+    </datalist>
+    <br>
+    Profile picture:<br>
+	<input type="file" name="profilepic" accept="image/*">
+	<br>
+    House Pictures:<br>
+    <input type="file" name="housepic" accept="image/*">
+	<br>
+    Description:<br>
+    <textarea rows="4" cols="50" name="description" form="userform">
+    Enter the description of your house here...
+    </textarea>
+    <br>
+	<input type="submit" value="Submit">
+	<input type="reset">
+</form>
+
+</body>
+</html>

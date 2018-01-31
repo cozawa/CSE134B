@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightblue;
+    font-size:20px;
+    font-family: verdana;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #307f9c;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-family:verdana;
+    font-size: 15px;
+}
+
+li a:hover {
+    background-color: green;
+}
+
+form{
+	text-align:center;
+    margin-left:270px;
+    margin-right:270px;
+    padding: 20px;
+	background-color: #d8ecf3;
+    opacity: 0.9;
+}
+
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#groups">Your groups</a></li>
+  <li><a href="#gchat">Group chat</a></li>
+  <li><a href="#calendar">Calendar</a></li>
+</ul>
+
+<h1>Join group</h1>
+
+<form action="/action_page.php">
+	Group name:<br>
+    <input type="text" name="groupname">
+    <br>
+    Password: <br>
+    <input type="password" name="psw">
+    <br>
+    <input type="submit" value="Submit">
+	<input type="reset">
+</form>
+
+<p> Don't have a group yet?
+<b><a href="#creategroup" target="_blank">Create group</a></b></p>
+</body>
+</html>
