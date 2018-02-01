@@ -3,11 +3,36 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 0 20px;
-    }
+      body {
+          margin: 0 auto;
+          max-width: 800px;
+          padding: 0 20px;
+          background-color: lightblue;
+          font-size: 20px;
+          font-family: verdana;
+      }
+
+      nav {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #307f9c;
+      }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-family: verdana;
+            font-size: 1.5vw;
+        }
 
     .container {
       border: 2px solid #dedede;
@@ -54,32 +79,38 @@
   </style>
 </head>
 <body>
+    <nav>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="your_groups.html">Your groups</a></li>
+        <li><a href="friendchat.html">Group chat</a></li>
+        <li><a href="your_calendar.html">Calendar</a></li>
+    </nav>
 
-  <h1>Chat with Recommenders</h1>
+    <h1>Chat with Recommenders</h1>
 
-  <div class="container">
-    <img src="images/tumblr_ov79coGBC61vy2tgqo4_400.png" alt="Avatar" style="width:100%;">
-    <p>Hello!</p>
-    <span class="time-right">11:00</span>
-  </div>
+    <div class="container">
+        <img src="images/tumblr_ov79coGBC61vy2tgqo4_400.png" alt="Avatar" style="width:100%;">
+        <p>Hello!</p>
+        <span class="time-right">11:00</span>
+    </div>
 
-  <div class="container darker">
-    <img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">
-    <p>Do you know any good tourist sites in San Diego?</p>
-    <span class="time-left">11:01</span>
-  </div>
+    <div class="container darker">
+        <img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">
+        <p>Do you know any good tourist sites in San Diego?</p>
+        <span class="time-left">11:01</span>
+    </div>
 
-  <div class="container">
-    <img src="images/tumblr_ov79coGBC61vy2tgqo4_400.png" alt="Avatar" style="width:100%;">
-    <p>Yep, here are my recommendations!</p>
-    <span class="time-right">11:02</span>
-  </div>
+    <div class="container">
+        <img src="images/tumblr_ov79coGBC61vy2tgqo4_400.png" alt="Avatar" style="width:100%;">
+        <p>Yep, here are my recommendations!</p>
+        <span class="time-right">11:02</span>
+    </div>
 
-  <div class="container darker">
-    <img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">
-    <p>Cool, thanks!</p>
-    <span class="time-left">11:05</span>
-  </div>
+    <div class="container darker">
+        <img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">
+        <p>Cool, thanks!</p>
+        <span class="time-left">11:05</span>
+    </div>
 
 </body>
 </html>
