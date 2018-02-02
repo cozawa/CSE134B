@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-      body {
-          margin: 0 auto;
-          max-width: 60%;
-          padding: 0% 20%;
-          background-color: lightblue;
-          font-size: 1.5vw;
-          font-family: verdana;
-      }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Chat with Recommenders</title>
+    <style>
+        body {
+            margin: 0 auto;
+            max-width: 60%;
+            padding: 0% 20%;
+            background-color: lightblue;
+            font-size: 1.5vw;
+            font-family: verdana;
+        }
 
-      nav {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #307f9c;
-      }
+        .center {
+            margin: 0 auto;
+        }
 
-        nav li {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #307f9c;
+        }
+
+        ul li {
             float: left;
         }
 
-        nav li a {
+        ul li a {
             display: block;
             color: white;
             text-align: center;
@@ -34,57 +40,57 @@
             font-size: 1.5vw;
         }
 
-    .container {
-      border: 0.25vw solid #dedede;
-      background-color: #f1f1f1;
-      border-radius: 1%;
-      padding: 1%;
-      margin: 1% 0%;
-    }
+        .container {
+            border: 0.25vw solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 1%;
+            padding: 1%;
+            margin: 1% 0%;
+        }
 
-    .darker {
-      border-color: #ccc;
-      background-color: #ddd;
-    }
+        .darker {
+            border-color: #ccc;
+            background-color: #ddd;
+        }
 
-    .container::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
 
-    .container img {
-      float: left;
-      max-width: 10%;
-      width: 100%;
-      margin-right: 5%;
-      border-radius: 50%;
-    }
+        .container img {
+            float: left;
+            max-width: 10%;
+            width: 100%;
+            margin-right: 5%;
+            border-radius: 50%;
+        }
 
-      .container img.right {
-        float: right;
-        margin-left: 5%;
-        margin-right: 0%;
-      }
+            .container img.right {
+                float: right;
+                margin-left: 5%;
+                margin-right: 0%;
+            }
 
-    .time-right {
-      float: right;
-      color: #aaa;
-    }
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
 
-    .time-left {
-      float: left;
-      color: #999;
-    }
-  </style>
+        .time-left {
+            float: left;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-    <nav>
+    <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="your_groups.html">Your groups</a></li>
         <li><a href="friendchat.html">Group chat</a></li>
         <li><a href="your_calendar.html">Calendar</a></li>
-    </nav>
+    </ul>
 
     <h1>Chat with Recommenders</h1>
 
@@ -113,10 +119,10 @@
     </div>
 
     <form action="/action_page.php">
-        <center>
+        <div class="center">
             <input type="text" name="message"><br>
             <input type="submit" value="Submit">
-        </center>
+        </div>
     </form>
 
 </body>
