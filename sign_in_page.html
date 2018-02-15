@@ -65,6 +65,25 @@ b a:hover{
     opacity: 0.8;
 }
 </style>
+<script>
+function submit(){
+	if(document.getElementById("userid").value == ""){
+    	alert("You must fill in a username and password.");
+    }
+    else{
+		var pass = localstorage.getItem(document.getElementById("userid").value);
+    	if(pass == ""){
+    		alert("This account does not exist. Please create a new account.");
+    	}
+    	if(pass == document.getElementById("psw").value){
+    		window.location.href = "your_groups.html";
+    	}
+    	else{
+    		alert("Wrong password.");
+    	}
+    }
+}
+</script>
 </head>
 <body>
 
@@ -75,16 +94,17 @@ b a:hover{
 </ul>
 
 <h1>Sign-in</h1>
-<form action="/action_page.php">
+<form>
 	Username:<br>
-    <input type="text" name="userid" style="height:1.8vw; width:15vw; font-size:1.5vw">
+    <input type="text" id="userid" style="height:1.8vw; width:15vw; font-size:1.5vw">
     <br>
     Password: <br>
-    <input type="password" name="psw" style="height:1.8vw; width:15vw; font-size:1.5vw">
+    <input type="password" id="psw" style="height:1.8vw; width:15vw; font-size:1.5vw">
     <br>
-    <input type="submit" value="Submit" style="height:5vw; width:7vw; font-size:1.5vw">
+    <input type="button" value="Submit" style="height:5vw; width:7vw; font-size:1.5vw" onclick="submit()">
     <input type="reset" style="height:5vw; width:7vw; font-size:1.5vw">
 </form>
+
 <p> Don't have an account yet?
 	<b><a href="Signup_page.html" target="_blank">Sign up!</a></b><br> </p>
 </body>
