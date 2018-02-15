@@ -71,7 +71,7 @@ function send(){
     	alert("You must fill in a username and password.");
     }
     else{
-		var pass = localstorage.getItem(document.getElementById("userid").value);
+		var pass = localStorage.getItem(document.getElementById("userid").value);
     	if(pass == null){
     		alert("This account does not exist. Please create a new account.");
     	}
