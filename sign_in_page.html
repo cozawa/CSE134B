@@ -72,7 +72,7 @@ function send(){
     }
     else{
 		var pass = localstorage.getItem(document.getElementById("userid").value);
-    	if(pass == ""){
+    	if(pass == null){
     		alert("This account does not exist. Please create a new account.");
     	}
     	if(pass == document.getElementById("psw").value){
