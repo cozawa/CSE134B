@@ -66,8 +66,8 @@ b a:hover{
 }
 </style>
 <script>
-function submit(){
-	if(document.getElementById("userid").value == ""){
+function send(){
+	if(document.getElementById("userid").value == "" || document.getElementById("psw").value == ""){
     	alert("You must fill in a username and password.");
     }
     else{
@@ -101,7 +101,7 @@ function submit(){
     Password: <br>
     <input type="password" id="psw" style="height:1.8vw; width:15vw; font-size:1.5vw">
     <br>
-    <input type="button" value="Submit" style="height:5vw; width:7vw; font-size:1.5vw" onclick="submit()">
+    <input type="button" value="Submit" style="height:5vw; width:7vw; font-size:1.5vw" onclick="send()">
     <input type="reset" style="height:5vw; width:7vw; font-size:1.5vw">
 </form>
 
