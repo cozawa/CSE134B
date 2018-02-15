@@ -64,7 +64,7 @@ li a:hover {
 </ul>
 
 <h1>Make an account</h1>
-<form action="/action_page.php">
+<form name="signup">
 	Username:<br>
     <input type="text" name="userid" style="height:1.8vw; width:15vw; font-size:1.2vw">
     <br>
@@ -74,9 +74,15 @@ li a:hover {
     E-mail: <br>
     <input type="email" name="email" style="height:1.8vw; width:15vw; font-size:1.2vw">
     <br>
-    <input type="submit" value="Submit" style="height:5vw; width:7vw; font-size:1.5vw">
+    <button type="button" onclick="store()" style="height:5vw; width:7vw; font-size:1.5vw">Submit</button>
 	<input type="reset" style="height:5vw; width:7vw; font-size:1.5vw">
 </form>
+
+<script>
+    function store() {
+        localStorage.setItem(String(document.forms["signup"].elements["userid"].value), String(document.forms["signup"].elements["psw"].value));
+    }
+</script>
 
 </body>
 </html>
