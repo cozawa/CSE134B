@@ -75,7 +75,7 @@ function send(){
     	if(pass == null){
     		alert("This account does not exist. Please create a new account.");
     	}
-    	if(pass == document.getElementById("psw").value){
+    	else if(pass == document.getElementById("psw").value){
     		window.location.href = "your_groups.html";
     	}
     	else{
