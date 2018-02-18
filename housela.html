@@ -51,9 +51,16 @@ font-size: 7vw;
 -webkit-text-stroke-width: 1px;
 }
 
-.float {
-display: inline-block;
-margin-bottom: 35px;
+h2 {
+font-size: 3vw;
+margin-top: 0vw;
+}
+
+h3 a, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
+font-size: 2.5vw;
+color: indigo;
+margin-bottom: 5px;
+text-decoration: none;
 }
 
 </style>
@@ -63,26 +70,63 @@ margin-bottom: 35px;
 <ul>
   <li><a href="home.html">Home</a></li>
   <li><a href="sign_in_page.html">Sign-in</a></li>
-  <li><a href="Recommender_profile_setup_page.html">Create a profile</a></li>
   <li><a href="your_groups.html">My Account</a></li>
 </ul>
 
 <h1>Housing in Los Angeles</h1>
 
-<img src="house.jpg" alt="h" style="width:100px;height:100px;">
-<div class=float>
-<p>Bedroom available by the beach, $300/week<br>
-Ask me about tourist attractions nearby!</p>
-<a href="housingchat.html">Contact</a>
-</div>
+<div id="placeholder"></div>
 
-<br>
-<img src="house.jpg" alt="h" style="width:100px;height:100px;">
-<div class=float>
-<p>House available near UCLA campus, $500/week<br>
-Ask me about transportation options nearby!</p>
-<a href="housingchat.html">Contact</a>
-</div>
-      
+<h3><a href="housingchat.html">Contact</a></h3>
+
+<h2>Post a listing!</h1>
+
+<form name="userform">
+	First name:<br>
+	<input type="text" name="firstname" value="First"
+           style="width:23vw; font-size:15px; font-family:serif">
+	<br>
+	Last name:<br>
+	<input type="text" name="lastname" value="Last"
+           style="width:23vw; font-size:15px; font-family:serif">
+	<br>
+    Profile picture:<br>
+	<input type="text" name="homepic" value="house.jpg"
+           style="width:23vw; font-size:15px; font-family:serif">
+	<br>
+    Description:<br>
+    <textarea id="description" rows="8" style="width:70vw; font-size:15px; font-family:serif" wrap="soft"> </textarea>
+    <br>
+	<button type="button" onclick="list()" style="height:5vw; width:7vw; font-size:1.5vw">Submit</button>
+	<input type="reset" style="height:5vw; width:7vw; font-size:1.5vw">
+</form>
+
 </body>
 </html>
+
+<script>
+function list() {
+    var curr = document.getElementById("placeholder");
+    var brk = document.createElement("br");
+    var brkt = document.createElement("br");
+    var image = document.createElement("img");
+    image.src = document.forms["userform"].elements["homepic"].value;
+    image.style.width = "130px"; image.style.height = "130px";
+    var imgdiv = document.createElement("div");
+    imgdiv.appendChild(image); imgdiv.style.display = "inline-block";
+    document.body.insertBefore(imgdiv, curr);
+    var name = String(document.forms["userform"].elements["firstname"].value) + " " +
+               String(document.forms["userform"].elements["lastname"].value);
+    var description = String(document.forms["userform"].elements["description"].value);
+    var label = document.createTextNode(name);
+    var text = document.createTextNode(description);
+    var sep = document.createElement("div");
+    sep.style.display = "inline-block";
+    sep.style.marginBottom = "25px";
+    sep.style.marginRight = "25px";
+    sep.style.width = "60vw";
+    sep.appendChild(label); sep.appendChild(brk); sep.appendChild(text);
+    document.body.insertBefore(sep, curr);
+    document.body.insertBefore(brkt, curr);
+}
+</script>
