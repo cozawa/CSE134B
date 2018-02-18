@@ -52,6 +52,7 @@ p {
     display: block;
 }
 
+
 </style>
 
 <script>
@@ -61,8 +62,10 @@ p {
         var btn = document.createElement("button");
         var t = document.createTextNode("Delete");
         btn.appendChild(t);
+        btn.style.fontSize = "1vw";
         var entry = document.createElement('ol');
-		entry.appendChild(document.createTextNode(newgroup));
+        var txt = document.createTextNode(newgroup);
+		entry.appendChild(txt);
         entry.appendChild(btn);
 		list.appendChild(entry);
         btn.addEventListener("click", function(){entry.parentNode.removeChild(entry);});
