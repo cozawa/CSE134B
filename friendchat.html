@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Chat with Friend Group</title>
+    <title>Chat with Housing</title>
     <style>
         body {
             margin: 0 auto;
@@ -14,8 +14,27 @@
             font-family: verdana;
         }
 
-        .center {
+        .center{
             margin: 0 auto;
+        }
+
+        .mytext{
+    border:0;padding:10px;background:whitesmoke;
+        }
+        .text{
+            width:75%;display:flex;flex-direction:column;
+        }
+        .text > p:first-of-type{
+            width:100%;margin-top:0;margin-bottom:auto;line-height: 13px;font-size: 12px;
+        }
+        .text > p:last-of-type{
+            width:100%;text-align:right;color:silver;margin-bottom:-7px;margin-top:auto;
+        }
+        .text-l{
+            float:left;padding-right:10px;
+        }        
+        .text-r{
+            float:right;padding-left:10px;
         }
 
         ul {
@@ -26,19 +45,19 @@
             background-color: #307f9c;
         }
 
-            ul li {
-                float: left;
-            }
+        ul li {
+            float: left;
+        }
 
-                ul li a {
-                    display: block;
-                    color: white;
-                    text-align: center;
-                    padding: 10px 12px;
-                    text-decoration: none;
-                    font-family: verdana;
-                    font-size: 1.5vw;
-                }
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-family: verdana;
+            font-size: 1.5vw;
+        }
 
         .container {
             border: 0.25vw solid #dedede;
@@ -70,7 +89,7 @@
             .container img.right {
                 float: right;
                 margin-left: 5%;
-                margin-right: 0%;
+                margin-right: 0;
             }
 
         .time-right {
@@ -84,7 +103,6 @@
         }
     </style>
 </head>
-
 <body>
     <ul>
         <li><a href="home.html">Home</a></li>
@@ -92,25 +110,47 @@
         <li><a href="friendchat.html">Group chat</a></li>
         <li><a href="your_calendar.html">Calendar</a></li>
     </ul>
+
     <h1>Chat with Friend Group</h1>
 
-    <div class="container">
-        <img src="images/tumblr_ov79coGBC61vy2tgqo4_400.png" alt="Avatar" style="width:100%;">
-        <p>
-            Hi!
-        </p>
-        <span class="time-right">11:00</span>
+
+    <div class="chat" id='chat'>
+        <div class="container">
+            <img src="images/tumblr_ov79coGBC61vy2tgqo4_400.png" alt="Avatar" style="width:100%;">
+            <p>
+                Hi!
+            </p>
+            <span class="time-right">11:00</span>
+        </div>
+
+        <div class="container darker" id='mybox'>
+            <img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">
+            <p>Where should we head?</p>
+            <span class="time-left">11:01</span>
+        </div>
     </div>
 
-    <div class="container darker">
-        <img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">
-        <p>Where should we head?</p>
-        <span class="time-left">11:01</span>
-    </div>
+    <div class="text text-r" style="background:whitesmoke !important">
+         <input type="text" class="mytext" name="message" id='message' placeholder="Type a message"/>
+         <input type="Button" value="Send message" onclick="send()">
+    </div> 
 
-    <form action="/action_page.php">
-        <div class="center"><input type="text" name="message"><br>
-        <input type="submit" value="Submit"></div>
-    </form>
+    <script>
+        function send() {
+            var mybox = document.getElementById('mybox');
+            var cln = mybox.cloneNode(true);
+            var mytext = document.getElementById('message').value;
+            var objTo = document.getElementById('chat');
+            var divTest = document.createElement("div");
+            var html = '<img src="images/f12ff798e424cfa4bbebc8624a31c3ee.jpg" alt="Avatar" class="right" style="width:100%;">' + 
+                        '<p>' + mytext + '</p>' + 
+                        '<span class="time-left">11:01</span>';
+            cln.innerHTML = html;
+            //cln.innerHTML = mytext;
+            //objTo.appendChild(divTest);
+            objTo.appendChild(cln);
+        }
+    </script>
+
 </body>
 </html>
