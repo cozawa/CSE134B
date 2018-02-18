@@ -19,17 +19,17 @@ p {
     font-family: verdana;
     font-size: 2vw;
 }
-ul {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #307f9c;
 }
-ul li {
+.menu ul li {
     float: left;
 }
-ul li a {
+.menu ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -38,48 +38,58 @@ ul li a {
     font-family:verdana;
     font-size: 1.5vw;
 }
-li a:hover {
+.menu li a:hover {
     background-color: green;
 }
-ol {
+.yourgroups ol {
 	font-size:2vw;
     list-style-type: none;
-    padding-left: 30%;
-    padding-right: 30%;
-    
-}
-ol li{
-	padding:3%;
-}
-
-ol a{
-	background-color: #d8ecf3;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #d8ecf3;
     color:black;
     text-align:center;
     display: block;
 }
-b a:hover{
-	color:green;
-}
+
 </style>
+
+<script>
+	function create(){
+    	var list = document.getElementById("groups");
+        var newgroup = document.getElementById("create").value;
+        var btn = document.createElement("button");
+        var t = document.createTextNode("Delete");
+        btn.appendChild(t);
+        var entry = document.createElement('ol');
+		entry.appendChild(document.createTextNode(newgroup));
+        entry.appendChild(btn);
+		list.appendChild(entry);
+        btn.addEventListener("click", function(){entry.parentNode.removeChild(entry);});
+    }
+    
+</script>
 </head>
 <body>
-<ul>
-  <li><a href="home.html">Home</a></li>
-  <li><a href="your_groups.html">Your groups</a></li>
-  <li><a href="friendchat.html">Group chat</a></li>
-  <li><a href="your_calendar.html">Calendar</a></li>
-</ul>
+
+<div class="menu">
+	<ul>
+	  <li><a href="home.html">Home</a></li>
+	  <li><a href="groupitinerary.html">Your itinerary</a></li>
+	  <li><a href="friendchat.html">Group chat</a></li>
+ 	 <li><a href="your_calendar.html">Calendar</a></li>
+	</ul>
+</div>
 <h1>Your groups</h1>
-<ol>
-  <li><a href="groupitinerary.html">Group uno</a></li>
-  <li><a href="groupitinerary.html">Santa Barbara trip</a></li>
-  <li><a href="groupitinerary.html">SD group</a></li>
-</ol>
-<p> Don't have a group yet?
-<b><a href="create_group.html" target="_blank">Create group</a></b><br>
-Looking for your group?
-<b><a href="join_group.html" target="_blank">Join group</a></b><br>
+<div class = "yourgroups">
+	<ol id = "groups">
+	  
+	</ol>
+</div>
+
+<p> Add your group! <br>
+<input type="text" id="create" style="height:1.8vw; width:20vw; font-size:1.2vw" value="Enter name here">
+<input type="button" onclick="create()" style="height:5vw; width:12vw; font-size:1.5vw" value="Add group">
 </p>
 </body>
 </html>
