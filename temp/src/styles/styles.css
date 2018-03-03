@@ -7,10 +7,25 @@
   margin: 0 auto;
 }
 
-a.active {
-  color: orange;
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #307f9c;
 }
-
-nav {
-  padding-top: 20px;
+.menu ul li {
+  float: left;
+}
+.menu ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-family:verdana;
+  font-size: 1.5vw;
+}
+.menu li a:hover {
+  background-color: green;
 }
