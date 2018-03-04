@@ -78,6 +78,7 @@ function create(){
     let newgroup = document.getElementById("create").value; 
     if(newgroup == ""){
         alert("You must enter a group name");
+        return;
     }
     document.getElementById("create").value = "";
     let btn = document.createElement("button");
