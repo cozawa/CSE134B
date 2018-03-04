@@ -26,20 +26,20 @@ class SignInPage extends React.Component {
 }
 
 function send(){
-	if(document.getElementById("userid").value == "" || document.getElementById("psw").value == ""){
-    	alert("You must fill in a username and password.");
+	if(document.getElementById("userid").value==""||document.getElementById("psw").value==""){
+        alert('You must fill in a username and password.');
     }
     else{
-		var pass = localStorage.getItem(document.getElementById("userid").value);
-    	if(pass == null){
-    		alert("This account does not exist. Please create a new account.");
-    	}
-    	else if(pass == document.getElementById("psw").value){
+        let pass = localStorage.getItem(document.getElementById("userid").value);
+        if(pass==null){
+            alert("This account does not exist. Please create a new account.");
+        }
+        else if(pass == document.getElementById("psw").value){
             window.location.href = "your_groups.html";
-    	}
-    	else{
-    		alert("Wrong password.");
-    	}
+        }
+        else{
+            alert("Wrong password.");
+        }
     }
 }
 
