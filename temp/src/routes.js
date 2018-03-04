@@ -14,6 +14,9 @@ import SignUpPage from './components/signup/SignUpPage';
 import SignInPage from './components/signin/SignInPage';
 import CalendarPage from './components/calendar/CalendarPage';
 import GroupPage from './components/group/GroupPage';
+import FriendChat from './components/friendchat/FriendChat';
+import HousingChat from './components/housingchat/HousingChat';
+import RecommenderChat from './components/recommenderchat/RecomenderChat';
 
 export default (
   <Route path="/" component={App}>
@@ -30,5 +33,8 @@ export default (
     <Route path="signin" component={SignInPage}/>
     <Route path="calendar" component={CalendarPage}/>
     <Route path="group" component={GroupPage}/>
+    <Route path="friendchat" component={FriendChat} />
+    <Route path="housingchat" component={HousingChat} />
+    <Route path="recommenderchat" component={RecommenderChat} />
   </Route>
 );
