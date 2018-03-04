@@ -1,38 +1,103 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import { Link, IndexLink } from 'react-router';
+//import GroupForm from './GroupForm';
 
 class GroupPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            list: [],
+            errors: {}
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    handleChange(event) {
+        const name = event.target.name;
+        this.setState({
+            [name]: event.target.value
+        });
+    }
+    
+    handleSubmit(event) {
+        //event.preventDefault();
+        let temp = this.state.list.slice();
+        let temperrors={};
+        if(this.state.name != ""){
+            
+            temp.push(<GroupPost
+            name={this.state.name}
+            />);
+            create();
+            this.setState({list:temp});
+        }
+        else{
+            temperrors.title='You must enter a group name';
+            this.setState({errors:temperrors});
+            alert("You must enter a group name");
+        }
+    }
   render() {
     return (
     <div className="grouppage">
         <h2>My groups</h2>
+
         <div className = "yourgroups">
-            <ol id = "groups">
+            <ol id = "groups"> 
             </ol>
         </div>
         <p>
-            Add your group! <br></br>
-            <input type = "text" id = "create" placeholder="Enter name here"/>
-            <input type = "button" value="Add group" onClick={create}/>
+            
+            <form>
+                <header>Add your group!</header>
+                <input
+                    name="name" 
+                    type = "text" 
+                    id = "create" 
+                    placeholder="Enter name here"
+                    value={this.state.value}
+                    onChange={this.handleChange}
+                    />
+                <input 
+                    type = "button" 
+                    value="Add group" 
+                    onClick={this.handleSubmit} />
+
+            </form>
         </p>
     </div>
     );
-  }
-  
+  } 
 }
+
+
 function create(){
-    var list = document.getElementById("groups");
-    var newgroup = document.getElementById("create").value;
-    var btn = document.createElement("button");
-    var t = document.createTextNode("Delete");
+    let l = document.getElementById("groups");
+    let newgroup = document.getElementById("create").value; 
+    if(newgroup == ""){
+        alert("You must enter a group name");
+    }
+    document.getElementById("create").value = "";
+    let btn = document.createElement("button");
+    let t = document.createTextNode("Delete");
     btn.appendChild(t);
     btn.style.fontSize = "1vw";
-    var entry = document.createElement('ol');
-    var txt = document.createTextNode(newgroup);
+    let entry = document.createElement('ol');
+    let txt = document.createTextNode(newgroup);
     entry.appendChild(txt);
     entry.appendChild(btn);
-    list.appendChild(entry);
+    l.appendChild(entry);
     btn.addEventListener("click", function(){entry.parentNode.removeChild(entry);});
 }
+
+function GroupPost(props) {
+    return (
+        <div>
+        <div className="name"> {props.name} </div>
+        </div>
+    );
+}
+
 export default GroupPage;
