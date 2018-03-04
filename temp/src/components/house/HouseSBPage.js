@@ -6,6 +6,7 @@ class HouseSBPage extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
+        imgfile: '',
         name: '',
         description: '',
         list: []
@@ -25,6 +26,7 @@ handleSubmit(event) {
     event.preventDefault();
     let temp = this.state.list.slice();
     temp.push(<Recpost
+        imgfile={this.state.imgfile}
         name={this.state.name}
         description={this.state.description}
     />);
@@ -43,6 +45,15 @@ return (
 <h2>Post a listing!</h2>
 
 <form>
+    <label>
+        Photo:
+        <input
+            name="imgfile"
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+        />
+    </label>
     <label>
         Name:
         <input
@@ -71,6 +82,9 @@ return (
 function Recpost(props) {
     return (
         <div>
+        <div id="imgx">
+        <img style={{width:100, height:100}} src={require(props.imgfile)} alt='error'/>
+        </div>
         <div className="name"> {props.name} </div>
         <div className="text"> {props.description} </div>
         </div>
