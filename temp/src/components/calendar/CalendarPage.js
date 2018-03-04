@@ -85,31 +85,25 @@ class CalendarPage extends React.Component {
   
 }
 
+
 function newElement() {
     var myNodelist = document.getElementById("myUL").getElementsByTagName("li");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        myNodelist[i].appendChild(span);
-    }
-
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-    var list = document.querySelector(".todo ul");
-    list.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');
-        }
-    }, false);
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
@@ -126,6 +120,11 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+  li.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
