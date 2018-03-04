@@ -35,7 +35,8 @@ function send(){
             alert("This account does not exist. Please create a new account.");
         }
         else if(pass == document.getElementById("psw").value){
-            window.location.href = "your_groups.html";
+            window.location.href = "/group";
+            
         }
         else{
             alert("Wrong password.");
