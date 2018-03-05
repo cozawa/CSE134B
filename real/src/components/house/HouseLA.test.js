@@ -19,9 +19,9 @@ it('renders page', () => {
 }
 );
 
-it('Adding recommendation to list', () =>{
+/*it('Adding recommendation to list', () =>{
     const wrapper = setup();
     const submitButton = wrapper.find('button');
     submitButton.simulate('click');
     expect(wrapper.state().list.length).toBe(1);
-});
+});*/
