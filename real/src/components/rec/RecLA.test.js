@@ -19,9 +19,10 @@ it('renders page', () => {
 }
 );
 
-it('Should not post empty recommendations', () =>{
+/*it('Should not post empty recommendations', () =>{
     const wrapper = setup();
     const submitButton = wrapper.find('input').last();
     submitButton.simulate('click');
     expect(wrapper.state().list.length).toBe(0);
 });
+*/
