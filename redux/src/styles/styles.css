@@ -1,0 +1,342 @@
+/* Styles */
+/*#app {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  min-width: 550px;
+  max-width: 850px;
+  margin: 0 auto;
+}*/
+
+body{
+  background-color: lightblue;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #307f9c;
+}
+.menu ul li {
+  float: left;
+}
+.menu ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-family:verdana;
+  font-size: 1.5vw;
+}
+.menu li a:hover {
+  background-color: green;
+}
+.signuppage{
+    background-color:lightblue;
+    background-image:url("https://www.californiabeaches.com/wp-content/uploads/2014/09/bigs-Sunset-at-Wipeout-Beach-La-Jolla-California-e1482282928458.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    font-size:5vw;
+    font-family: verdana;
+}
+
+.signuppage form {
+    text-align:center;
+    font-size:2vw;
+    margin-left:20%;
+    margin-right:20%;
+    padding: 20px;
+  	background-color: #d8ecf3;
+    opacity: 0.9;
+}
+
+.signinpage{
+    background-color:lightblue;
+    background-image:url("https://www.homeadvisor.com/images/consumer/hhi/hero-photos/city/SanFrancisco.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    font-size:20px;
+    font-family: verdana;
+}
+
+.signinpage form{
+    font-size: 2vw;
+  	text-align:center;
+    margin-left:30%;
+    margin-right:30%;
+    padding: 20px;
+	  background-color: #d8ecf3;
+    opacity: 0.9;
+}
+
+.signinpage p{
+  color: white;
+  font-size: 2vw;
+}
+
+.signinpage a{
+  color: lightcoral;
+}
+
+.signinpage a:hover{
+  color: rgb(248, 54, 54);
+}
+
+a{
+  font-size: 2vw;
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  background-image:url(https://www.tastesantabarbarafoodtours.com/wp-content/uploads/2013/01/iStock3_000024377155Medium-970x500.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  text-align: center;
+}
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+.month ul li {
+  color: #1abc9c;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.month .prev {
+  float: left;
+  padding-top: 1vw;
+}
+.month .next {
+  float: right;
+  padding-top: 1vw;
+}
+.week .weekdays{
+  margin: 0;
+  padding: 1vw 0;
+  background-color: #ddd;
+  font-size: 1.4vw;
+}
+.week .weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+.day .days{
+  padding: 1vw 0;
+  background: #eee;
+  margin: 0;
+}
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:1.3vw;
+  color: #777;
+}
+.day .days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+ul {
+margin: 0;
+padding: 0;
+}
+.todo ul li {
+cursor: pointer;
+position: relative;
+padding: 12px 8px 12px 40px;
+list-style-type: none;
+background: #eee;
+font-size: 2vw;
+transition: 0.2s;
+
+/* make the list items unselectable */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.todo ul li:nth-child(odd) {
+background: #f9f9f9;
+}
+.todo ul li:hover {
+background: #ddd;
+}
+.todo ul li.checked {
+background: #888;
+color: #fff;
+text-decoration: line-through;
+}
+.todo ul li.checked::before {
+content: '';
+position: absolute;
+border-color: #fff;
+border-style: solid;
+border-width: 0 2px 2px 0;
+top: 10px;
+left: 16px;
+transform: rotate(45deg);
+height: 1.5vw;
+width: 0.7vw;
+}
+.close {
+position: absolute;
+right: 0;
+top: 0;
+padding: 12px 16px 12px 16px;
+}
+.close:hover {
+background-color: #f44336;
+color: white;
+}
+.header2 {
+background-color: #1abc9c;
+padding: 30px 40px;
+color: white;
+text-align: center;
+font-size:2vw;
+}
+.header2:after {
+content: "";
+display: table;
+clear: both;
+}
+.calendar input {
+  border: none;
+  width: 75%;
+  padding: 1vw;
+  float: left;
+  font-size: 1.5vw;
+  }
+.addBtn {
+padding: 1vw;
+width: 25%;
+background: #d9d9d9;
+color: #555;
+float: left;
+text-align: center;
+font-size: 1.5vw;
+cursor: pointer;
+transition: 0.3s;
+}
+.addBtn:hover {
+background-color: #bbb;
+}
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+.grouppage{
+    background-color: lightblue;
+    font-size:2vw;
+    font-family: verdana;
+}
+
+.grouppage h2{
+  font-size:3.5vw;
+}
+.grouppage h3{
+  font-size:2vw;
+}
+
+.yourgroups ol {
+	font-size:2vw;
+    list-style-type: none;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #d8ecf3;
+    color:purple;
+    text-align:center;
+    display: block;
+}
+
+.grouppage a{
+  color: lightcoral;
+}
+
+.grouppage a:hover{
+  color: rgb(248, 54, 54);
+}
+
+.groupform{
+  font-size: 2vw;
+}
+
+.center{
+  margin: 0 auto;
+}
+.mytext{
+border:0;padding:10px;background:whitesmoke;
+}
+.text{
+  width:75%;display:flex;flex-direction:column;
+}
+.text > p:first-of-type{
+  width:100%;margin-top:0;margin-bottom:auto;line-height: 13px;font-size: 12px;
+}
+.text > p:last-of-type{
+  width:100%;text-align:right;color:silver;margin-bottom:-7px;margin-top:auto;
+}
+.text-l{
+  float:left;padding-right:10px;
+}        
+.text-r{
+  float:right;padding-left:10px;
+}
+
+.container {
+  border: 0.25vw solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 1%;
+  padding: 1%;
+  margin: 1% 0%;
+}
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container img {
+  float: left;
+  max-width: 10%;
+  width: 100%;
+  margin-right: 5%;
+  border-radius: 50%;
+}
+  .container img.right {
+      float: right;
+      margin-left: 5%;
+      margin-right: 0;
+  }
+.time-right {
+  float: right;
+  color: #aaa;
+}
+.time-left {
+  float: left;
+  color: #999;
+}
